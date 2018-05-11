@@ -1,5 +1,5 @@
 ----------------------------------------------------------------------
--- symbols ipelet
+-- quickstyle ipelet v. 0.1 author Andre Schulz
 ----------------------------------------------------------------------
 
 label = "Quick Styles"
@@ -55,6 +55,8 @@ function setstyle(model, num)
 		 opacity="QuickOpacity"..index,
 		 fill="QuickFill"..index,
 		 dashstyle="QuickDash"..index,
+		 farrowsize = "QuickFArrow"..index,
+		 rarrowsize = "QuickRArrow"..index,
 		 farrow =  flag_farrow,
 		 rarrow =  flag_rarrow,
 		 pathmode = flag_pathmode
@@ -65,6 +67,8 @@ function setstyle(model, num)
 	model.attributes.opacity = "QuickOpacity"..index
 	model.attributes.dashstyle = "QuickDash"..index
 	model.attributes.fill = "QuickFill"..index
+	model.attributes.farrowsize = "QuickFArrow"..index
+	model.attributes.rarrowsize = "QuickRArrow"..index
 	model.attributes.farrow = flag_farrow
 	model.attributes.rarrow = flag_rarrow
 	model.attributes.pathmode = flag_pathmode
@@ -120,6 +124,8 @@ end
 
 -- get the attributes and write to sheet
 
+
+
 local entry_pen=sheets:find("pen",model.attributes.pen)
 sheet:add("pen", "QuickWidth"..index, entry_pen)
 local entry_stroke=sheets:find("color",model.attributes.stroke)
@@ -130,6 +136,15 @@ local entry_opacity=sheets:find("opacity",model.attributes.opacity)
 sheet:add("opacity", "QuickOpacity"..index, entry_opacity)
 local entry_dash=sheets:find("dashstyle",model.attributes.dashstyle)
 sheet:add("dashstyle", "QuickDash"..index, entry_dash)
+local entry_dash=sheets:find("dashstyle",model.attributes.dashstyle)
+sheet:add("dashstyle", "QuickDash"..index, entry_dash)
+local entry_farrow=sheets:find("arrowsize",model.attributes.farrowsize)
+sheet:add("arrowsize", "QuickFArrow"..index, entry_farrow)
+local entry_rarrow=sheets:find("arrowsize",model.attributes.rarrowsize)
+sheet:add("arrowsize", "QuickRArrow"..index, entry_rarrow)
+
+
+
 
 -- Encode values stored in flag vector
 

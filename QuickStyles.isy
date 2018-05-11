@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE ipestyle SYSTEM "ipe.dtd">
+<ipestyle name="QuickStyles">
+<pen name="QuickWidth1" value="1.2"/>
+<pen name="QuickWidth2" value="1.2"/>
+<pen name="QuickWidth3" value="1.2"/>
+<pen name="QuickWidth4" value="25"/>
+<pen name="QuickWidth5" value="10"/>
+<arrowsize name="QuickFArrow1" value="7"/>
+<arrowsize name="QuickRArrow1" value="7"/>
+<arrowsize name="QuickFArrow2" value="7"/>
+<arrowsize name="QuickRArrow2" value="7"/>
+<arrowsize name="QuickFArrow3" value="7"/>
+<arrowsize name="QuickRArrow3" value="7"/>
+<arrowsize name="QuickFArrow4" value="7"/>
+<arrowsize name="QuickRArrow4" value="7"/>
+<arrowsize name="QuickFArrow5" value="7"/>
+<arrowsize name="QuickRArrow5" value="7"/>
+<color name="QuickColor1" value="1 0.188 0.188"/>
+<color name="QuickFill1" value="1"/>
+<color name="QuickColor2" value="0.118 0.565 1"/>
+<color name="QuickFill2" value="1"/>
+<color name="QuickColor3" value="0.133 0.545 0.133"/>
+<color name="QuickFill3" value="1"/>
+<color name="QuickColor4" value="1 1 0"/>
+<color name="QuickFill4" value="1"/>
+<color name="QuickColor5" value="1"/>
+<color name="QuickFill5" value="1"/>
+<dashstyle name="QuickDash1" value="[]0"/>
+<dashstyle name="QuickDash2" value="[]0"/>
+<dashstyle name="QuickDash3" value="[4] 0"/>
+<dashstyle name="QuickDash4" value="[]0"/>
+<dashstyle name="QuickDash5" value="[]0"/>
+<opacity name="QuickOpacity1" value="1"/>
+<opacity name="QuickFlag1" value="5"/>
+<opacity name="QuickOpacity2" value="1"/>
+<opacity name="QuickFlag2" value="5"/>
+<opacity name="QuickOpacity3" value="1"/>
+<opacity name="QuickFlag3" value="5"/>
+<opacity name="QuickOpacity4" value="0.5"/>
+<opacity name="QuickFlag4" value="5"/>
+<opacity name="QuickOpacity5" value="1"/>
+<opacity name="QuickFlag5" value="5"/>
+</ipestyle>
