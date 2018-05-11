@@ -22,7 +22,7 @@ Currently a style stores:
 
 The data is stored in a ipe style sheet named *QuickStyle*. This means that you will store all styles within the documents. It is also possible to manually change the styles by editing the style sheet. You can also save the style sheet and add it to another document to transfer the presets. 
 
-The repository contains a [Quickstyles.isy](stylefile) with a preset-set. This might be useful if you run a presentation inside ipe and use the ink tool for annotations. The presets are:
+The repository contains a [stylefile](QuickStyles.isy) with a preset-set. This might be useful if you run a presentation inside ipe and use the ink tool for annotations. The presets are:
 
 - 1: red pen
 - 2: blue pen
