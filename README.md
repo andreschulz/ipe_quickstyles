@@ -3,7 +3,7 @@ Ipelet for quickly saving and selecting styles via hotkeys
 
 ## Installation
 
-Copy the [lua file](quickstyle.lua) into the ipelet directory (`~/.ipe/ipelets/` should work). To find the ipelet directories start ipe and select "show configuration" in the ipe help menu.
+Copy the [lua file](quickstyles.lua) into the ipelet directory (`~/.ipe/ipelets/` should work). To find the ipelet directories start ipe and select "show configuration" in the ipe help menu.
 
 ## Usage
 
@@ -20,7 +20,7 @@ Currently a style stores:
 - front/back arrow head sizes
 - the opacity
 
-The data is stored in a ipe style sheet named *QuickStyle*. This means that you will store all styles within the documents. It is also possible to manually change the styles by editing the style sheet. You can also save the style sheet and add it to another document to transfer the presets. 
+The data is stored in a ipe style sheet named *QuickStyle*. This means that you will store all styles within the documents. It is also possible to manually change the styles by editing the style sheet. You can also save the style sheet and add it to another document to transfer the presets. It is a good advise to add the style sheet in last position.
 
 The repository contains a [stylefile](QuickStyles.isy) with a preset-set. This might be useful if you run a presentation inside ipe and use the ink tool for annotations. The presets are:
 

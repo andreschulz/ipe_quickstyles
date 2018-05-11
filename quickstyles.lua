@@ -1,5 +1,5 @@
 ----------------------------------------------------------------------
--- quickstyle ipelet v. 0.1 author Andre Schulz
+-- quickstyles ipelet v. 0.1 author Andre Schulz
 ----------------------------------------------------------------------
 
 label = "Quick Styles"
@@ -103,7 +103,7 @@ local index = string.sub(tostring(num),1,1)
 local doc = model.doc
 local sheets = doc:sheets()
 
--- check if quickstyle sheet exist
+-- check if quickstyles sheet exist
 
 local sheet
 local oldsheet = false
@@ -119,7 +119,7 @@ end
 if oldsheet == false then
 	sheet = ipe.Sheet()    
 	sheet:setName("QuickStyles")
-	sheets:insert(1,sheet)
+	sheets:insert(sheets:count()+1,sheet)
 end
 
 -- get the attributes and write to sheet
@@ -205,14 +205,14 @@ methods = {
   { label = "Define style 5", run = define} 
 }
 
-shortcuts.ipelet_1_quickstyle = "1"
-shortcuts.ipelet_2_quickstyle = "2"
-shortcuts.ipelet_3_quickstyle = "3"
-shortcuts.ipelet_4_quickstyle = "4"
-shortcuts.ipelet_5_quickstyle = "5"
-shortcuts.ipelet_6_quickstyle = "Shift+1"
-shortcuts.ipelet_7_quickstyle = "Shift+2"
-shortcuts.ipelet_8_quickstyle = "Shift+3" 
-shortcuts.ipelet_9_quickstyle = "Shift+4"
-shortcuts.ipelet_10_quickstyle = "Shift+5"
+shortcuts.ipelet_1_quickstyles = "1"
+shortcuts.ipelet_2_quickstyles = "2"
+shortcuts.ipelet_3_quickstyles = "3"
+shortcuts.ipelet_4_quickstyles = "4"
+shortcuts.ipelet_5_quickstyles = "5"
+shortcuts.ipelet_6_quickstyles = "Shift+1"
+shortcuts.ipelet_7_quickstyles = "Shift+2"
+shortcuts.ipelet_8_quickstyles = "Shift+3" 
+shortcuts.ipelet_9_quickstyles = "Shift+4"
+shortcuts.ipelet_10_quickstyles = "Shift+5"
 ----------------------------------------------------------------------
