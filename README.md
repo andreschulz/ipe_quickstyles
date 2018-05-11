@@ -3,7 +3,7 @@ Ipelet for quickly saving and selecting styles via hotkeys
 
 ## Installation
 
-Copy the lua file into the ipelet directory (`~/.ipe/ipelets/` should work). To find the ipelet directories start ipe and select "show configuration" in the ipe help menu.
+Copy the [lua file](quickstyle.lua) into the ipelet directory (`~/.ipe/ipelets/` should work). To find the ipelet directories start ipe and select "show configuration" in the ipe help menu.
 
 ## Usage
 
@@ -36,7 +36,7 @@ The properties for stroke color, fill color, line width, opacity, arrowsize and 
 
 ## Future plans
 
-I am unsure if it would be a better idea to store the values for colors, width, etc. also inside a fake oppacity value. It would be easy to store more properties with the presets (line caps, arrow head shapes, ...), not sure if this is needed. 
+I am unsure if it would be a better idea to store the values for colors, width, etc. also inside a fake oppacity value. It would be easy to store more properties with the presets (line caps, arrow head shapes, ...), not sure if this is needed. I have not implemented/checked the redo/undo function.
 
 ## Updates
 
