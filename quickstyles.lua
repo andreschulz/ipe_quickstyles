@@ -49,7 +49,8 @@ function setstyle(model, num)
 
 	-- set the remaining properties using the predifined styles in quickstyles.isy
 
-	model.ui.setAttributes(model.ui, doc:sheets(),
+
+	model.ui.setAttributes(model.ui, sheets,
 		{stroke = "QuickColor"..index, 
 		 pen="QuickWidth"..index, 
 		 opacity="QuickOpacity"..index,
@@ -169,6 +170,9 @@ if (model.attributes.pathmode == "filled") then
 -- write flag vector to sheet
 
 sheet:add("opacity", "QuickFlag"..index, entry_opacity_flag)
+
+model.ui:setupSymbolicNames(sheets)
+setstyle(model,index)
 
 end
 
