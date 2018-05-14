@@ -1,5 +1,5 @@
 ----------------------------------------------------------------------
--- quickstyles ipelet v. 0.1 author Andre Schulz
+-- quickstyles ipelet v. 0.2 author Andre Schulz
 ----------------------------------------------------------------------
 
 label = "Quick Styles"
@@ -24,7 +24,7 @@ function setstyle(model, num)
 	local doc = model.doc
 	local sheets = doc:sheets()
 
-	-- Retrieve flag vector decode values 
+	-- Retrieve flag vector and decode values 
 
 	local flag  = tonumber(sheets:find("opacity","QuickFlag"..index))
 	local flag_farrow = true
@@ -49,15 +49,24 @@ function setstyle(model, num)
 
 	-- set the remaining properties using the predifined styles in quickstyles.isy
 
+	-- need the variables since otherwise lua crashes in linux
+
+	local v_color = "QuickColor"..index
+	local v_width = "QuickWidth"..index
+	local v_opacity = "QuickOpacity"..index
+	local v_fill= "QuickFill"..index
+	local v_dashstyle = "QuickDash"..index
+	local v_farrowsize = "QuickFArrow"..index
+	local v_rarrowsize = "QuickRArrow"..index
 
 	model.ui.setAttributes(model.ui, sheets,
-		{stroke = "QuickColor"..index, 
-		 pen="QuickWidth"..index, 
-		 opacity="QuickOpacity"..index,
-		 fill="QuickFill"..index,
-		 dashstyle="QuickDash"..index,
-		 farrowsize = "QuickFArrow"..index,
-		 rarrowsize = "QuickRArrow"..index,
+		{stroke = v_color, 
+		 pen=v_width, 
+		 opacity=v_opacity,
+		 fill=v_fill,
+		 dashstyle=v_dashstyle,
+		 farrowsize = v_farrowsize,
+		 rarrowsize = v_rarrowsize,
 		 farrow =  flag_farrow,
 		 rarrow =  flag_rarrow,
 		 pathmode = flag_pathmode
@@ -112,7 +121,6 @@ local oldsheet = false
 for s=1,sheets:count() do
 	if tostring(sheets:sheet(s):name()) == "QuickStyles" then
 		sheet = sheets:sheet(s)
-	--	ipeui.messageBox(nil, "warning",sheets:sheet(s):name() , nil, nil)
 		oldsheet = true
 	end
 end
@@ -145,8 +153,6 @@ local entry_rarrow=sheets:find("arrowsize",model.attributes.rarrowsize)
 sheet:add("arrowsize", "QuickRArrow"..index, entry_rarrow)
 
 
-
-
 -- Encode values stored in flag vector
 
 local entry_opacity_flag = 0
@@ -159,7 +165,6 @@ if (model.attributes.rarrow) then
 	entry_opacity_flag = entry_opacity_flag +2
 	end
 
-
 if (model.attributes.pathmode == "stroked") then
 	entry_opacity_flag = entry_opacity_flag + 4
 	end
@@ -170,6 +175,8 @@ if (model.attributes.pathmode == "filled") then
 -- write flag vector to sheet
 
 sheet:add("opacity", "QuickFlag"..index, entry_opacity_flag)
+
+-- add new presets into the gui
 
 model.ui:setupSymbolicNames(sheets)
 setstyle(model,index)

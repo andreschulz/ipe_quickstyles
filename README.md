@@ -40,5 +40,6 @@ I am unsure if it would be a better idea to store the values for colors, width, 
 
 ## Updates
 
+- 05/14/18 fixed issue that caused crashes under the linux version of ipe
 - 05/11/18 Added size of arrow and included a preset isy-file
 - 05/10/18 First Version
